@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampXel | Where Adventure Meets Business Synergy</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#16422F',
+                            navy: '#112236',
+                            copper: '#CF7544',
+                            'copper-hover': '#B56133',
+                            light: '#F8FAF9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to right bottom, rgba(17, 34, 54, 0.9), rgba(22, 66, 47, 0.8)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80')",
+                        'wood-pattern': "linear-gradient(to right, rgba(22, 66, 47, 0.95), rgba(17, 34, 54, 0.95)), url('https://images.unsplash.com/photo-1448375240586-882707db8855?auto=format&fit=crop&w=1920&q=80')"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for animations and specific tweaks */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-brand-light antialiased">
+
+    <nav class="fixed w-full z-50 glass-nav shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-mountain-sun text-brand-copper text-3xl mr-2"></i>
+                    <span class="font-heading font-bold text-2xl text-brand-navy tracking-tight">Camp<span class="text-brand-copper">X</span>el</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-brand-navy font-medium hover:text-brand-copper transition-colors">About Us</a>
+                    <a href="#event" class="text-brand-navy font-medium hover:text-brand-copper transition-colors">Wood & Synergy '26</a>
+                    <a href="#benefits" class="text-brand-navy font-medium hover:text-brand-copper transition-colors">Benefits</a>
+                    <a href="#contact" class="bg-brand-navy text-white px-6 py-2.5 rounded-full font-medium hover:bg-brand-green transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-navy hover:text-brand-copper focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-brand-navy hover:bg-gray-50 rounded-md">About Us</a>
+                <a href="#event" class="block px-3 py-3 text-base font-medium text-brand-navy hover:bg-gray-50 rounded-md">Wood & Synergy '26</a>
+                <a href="#benefits" class="block px-3 py-3 text-base font-medium text-brand-navy hover:bg-gray-50 rounded-md">Benefits</a>
+                <a href="#contact" class="block px-3 py-3 mt-4 text-center text-base font-medium bg-brand-navy text-white rounded-md">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed pt-20">
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto reveal active">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-copper/20 text-brand-copper border border-brand-copper/50 font-semibold tracking-wider text-sm mb-6 uppercase">
+                B2B Corporate Retreats
+            </span>
+            <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                Where Adventure Meets <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-copper to-yellow-500">Business Synergy</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto mb-10">
+                Redefining corporate networking by uniting non-competing allied industries in the great outdoors. Trade the boardroom for the mountains.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#event" class="w-full sm:w-auto bg-brand-copper hover:bg-brand-copper-hover text-white text-lg font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(207,117,68,0.4)] hover:shadow-[0_0_30px_rgba(207,117,68,0.6)] transform hover:-translate-y-1">
+                    Join Wood & Synergy 2026
+                </a>
+                <a href="#about" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white text-lg font-medium px-8 py-4 rounded-full transition-all duration-300">
+                    Discover Our Vision
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white/70 hover:text-brand-copper transition-colors">
+                <i class="fa-solid fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Image Side -->
+                <div class="lg:w-1/2 relative reveal">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Corporate Team Outdoors" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-green/20 mix-blend-multiply"></div>
+                    </div>
+                    <!-- Floating badge -->
+                    <div class="absolute -bottom-8 -right-8 bg-brand-navy text-white p-6 rounded-2xl shadow-xl hidden md:block border-b-4 border-brand-copper">
+                        <p class="font-heading font-bold text-4xl text-brand-copper mb-1">100%</p>
+                        <p class="font-medium">Organic Growth Focus</p>
+                    </div>
+                </div>
+                
+                <!-- Text Side -->
+                <div class="lg:w-1/2 reveal">
+                    <h4 class="text-brand-copper font-bold tracking-wider uppercase mb-2">Who We Are</h4>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-brand-navy mb-6 leading-tight">
+                        Breaking the Monotony of Traditional Networking
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        At <strong class="text-brand-navy">CampXel</strong>, we believe the strongest business bonds, trust, and ecosystems are built outside the four walls of an office. We bring together non-competing, allied businesses into the great outdoors.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        By combining high-impact thrill ventures, strategic campfire mastermind sessions, and collaborative challenges, we create a stress-free environment for natural lead generation, idea cross-pollination, and lasting partnerships.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green">
+                                <i class="fa-solid fa-handshake text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-heading font-bold text-brand-navy">Allied Networks</h4>
+                                <p class="text-sm text-gray-500 mt-1">Connecting supply chains without direct competition.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-full bg-brand-copper/10 flex items-center justify-center text-brand-copper">
+                                <i class="fa-solid fa-fire text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-heading font-bold text-brand-navy">Campfire Strategy</h4>
+                                <p class="text-sm text-gray-500 mt-1">Relaxed, insightful mastermind sessions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="event" class="py-24 bg-wood-pattern bg-cover bg-center bg-fixed relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center reveal">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-copper text-white font-semibold tracking-wider text-sm mb-4 uppercase">
+                Flagship Pilot Event
+            </span>
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+                Wood & Synergy 2026
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-16 font-light">
+                An exclusive, invite-only inter-corporate retreat tailored specifically for India's Plywood, Laminates, Adhesives, and Hardware ecosystem.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <!-- Highlight Card 1 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl hover:bg-white/20 transition-all duration-300">
+                    <i class="fa-solid fa-share-nodes text-4xl text-brand-copper mb-6"></i>
+                    <h3 class="text-2xl font-heading font-bold text-white mb-3">B2B Lead Sharing</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Meet distributors, manufacturers, and hardware giants who share your customer base but aren't your competitors. Generate high-quality leads organically.
+                    </p>
+                </div>
+                
+                <!-- Highlight Card 2 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl hover:bg-white/20 transition-all duration-300">
+                    <i class="fa-solid fa-link text-4xl text-brand-copper mb-6"></i>
+                    <h3 class="text-2xl font-heading font-bold text-white mb-3">Supply Chain Synergy</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Discuss logistics, material sourcing, and market trends around the campfire. Discover cost-sharing models that benefit the entire ecosystem.
+                    </p>
+                </div>
+                
+                <!-- Highlight Card 3 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl hover:bg-white/20 transition-all duration-300">
+                    <i class="fa-solid fa-people-group text-4xl text-brand-copper mb-6"></i>
+                    <h3 class="text-2xl font-heading font-bold text-white mb-3">Team Resilience</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Test your top management's leadership through carefully curated wilderness survival games, bridge-building tasks, and orienteering.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-brand-navy bg-white rounded-full hover:bg-gray-100 transition-colors shadow-xl">
+                    Request an Invite <i class="fa-solid fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h4 class="text-brand-copper font-bold tracking-wider uppercase mb-2">The CampXel Advantage</h4>
+                <h2 class="font-heading text-4xl font-bold text-brand-navy mb-4">Why Shift to Outdoor Networking?</h2>
+                <p class="text-lg text-gray-600">
+                    Transforming standard business interactions into memorable, high-yield experiences.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-brand-green group reveal">
+                    <div class="h-16 w-16 bg-brand-green/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-earth-americas text-3xl text-brand-green group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-brand-navy mb-4">Cross-Industry Ecosystems</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We don't bring rivals together; we bring allies. Connect with companies that compliment your services, creating a unified ecosystem that benefits everyone involved.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-brand-copper group reveal" style="transition-delay: 100ms;">
+                    <div class="h-16 w-16 bg-brand-copper/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-copper group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-map-location-dot text-3xl text-brand-copper group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-brand-navy mb-4">Experiential Networking</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Shared challenges create deep bonds. Navigating an obstacle course or building a raft together breaks the ice faster than any formal corporate dinner ever could.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-brand-navy group reveal" style="transition-delay: 200ms;">
+                    <div class="h-16 w-16 bg-brand-navy/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-navy group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-arrow-trend-up text-3xl text-brand-navy group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-brand-navy mb-4">Organic B2B Growth</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        When defenses are down and genuine connections are made, business flows naturally. Turn campfire conversations into long-lasting, profitable B2B contracts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-brand-navy text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Info -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <i class="fa-solid fa-mountain-sun text-brand-copper text-4xl mr-3"></i>
+                        <span class="font-heading font-bold text-4xl tracking-tight">Camp<span class="text-brand-copper">X</span>el</span>
+                    </div>
+                    <p class="text-gray-400 text-lg mb-6 max-w-md">
+                        Where Adventure Meets Business Synergy. We build the future of corporate ecosystems, one adventure at a time.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-copper hover:text-white transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-copper hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-copper hover:text-white transition-colors">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-6 border-b-2 border-brand-copper pb-2 inline-block">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#about" class="hover:text-brand-copper transition-colors"><i class="fa-solid fa-angle-right mr-2 text-brand-copper text-sm"></i>About Us</a></li>
+                        <li><a href="#event" class="hover:text-brand-copper transition-colors"><i class="fa-solid fa-angle-right mr-2 text-brand-copper text-sm"></i>Wood & Synergy 2026</a></li>
+                        <li><a href="#benefits" class="hover:text-brand-copper transition-colors"><i class="fa-solid fa-angle-right mr-2 text-brand-copper text-sm"></i>Our Ecosystems</a></li>
+                        <li><a href="#" class="hover:text-brand-copper transition-colors"><i class="fa-solid fa-angle-right mr-2 text-brand-copper text-sm"></i>Host a Retreat</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-6 border-b-2 border-brand-copper pb-2 inline-block">Connect</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-envelope mt-1 mr-3 text-brand-copper"></i>
+                            <a href="mailto:network@campxel.in" class="hover:text-white transition-colors">network@campxel.in</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-phone mt-1 mr-3 text-brand-copper"></i>
+                            <span>+91 98765 43210 <br><span class="text-sm text-gray-500">(Mon-Fri, 9AM-6PM)</span></span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-brand-copper"></i>
+                            <span>Headquarters: <br>New Delhi, NCR, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 CampXel Retreats. All rights reserved.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('bg-white/90', 'bg-white');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('bg-white', 'bg-white/90');
+            }
+        });
+
+        // Scroll Reveal Animation Setup
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+</html>
